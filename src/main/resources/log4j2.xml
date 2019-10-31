@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%msg%n"/>
+      <!--<PatternLayout pattern="Relation -> %d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />-->
+    </Console>
+  </Appenders>
+
+  <Loggers>
+<!--    &lt;!&ndash; Log everything in hibernate &ndash;&gt;-->
+<!--    <Logger name="org.hibernate" level="trace" additivity="false">-->
+<!--      <AppenderRef ref="Console" />-->
+<!--    </Logger>-->
+<!--    &lt;!&ndash; Log SQL statements &ndash;&gt;-->
+<!--    <Logger name="org.hibernate.SQL" level="trace" additivity="false">-->
+<!--      <AppenderRef ref="Console" />-->
+<!--    </Logger>-->
+<!--    &lt;!&ndash; Log JDBC bind parameters &ndash;&gt;-->
+<!--    <Logger name="org.hibernate.type.descriptor.sql" level="error" additivity="false">-->
+<!--      <AppenderRef ref="Console" />-->
+<!--    </Logger>-->
+<!--    &lt;!&ndash; Log custom packages &ndash;&gt;-->
+<!--    <Logger name="com.boraji.tutorial.hibernate" level="debug" additivity="false">-->
+<!--      <AppenderRef ref="Console" />-->
+<!--    </Logger>-->
+  </Loggers>
+</Configuration>
