@@ -12,9 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Created by yslabko on 10/08/2017.
- */
 @Data @AllArgsConstructor @NoArgsConstructor
 @Entity
 public class Cat {

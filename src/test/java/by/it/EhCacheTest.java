@@ -21,11 +21,6 @@ import by.it.entity.Department;
 import by.it.entity.Employee;
 import by.it.util.HibernateUtil;
 
-/**
- * Class EhCacheTest
- *
- * Created by yslabko on 08/30/2017.
- */
 public class EhCacheTest {
     @Before
     public void init() {

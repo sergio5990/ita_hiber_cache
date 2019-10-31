@@ -8,9 +8,6 @@ import org.hibernate.annotations.OptimisticLocking;
 
 import javax.persistence.*;
 
-/**
- * Created by yslabko on 10/08/2017.
- */
 @Data @AllArgsConstructor @NoArgsConstructor
 @Entity
 @OptimisticLocking(type = OptimisticLockType.VERSION)

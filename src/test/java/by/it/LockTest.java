@@ -12,11 +12,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
 import java.util.HashMap;
 
-/**
- * Class LockTest
- * <p>
- * Created by yslabko on 10/06/2017.
- */
 public class LockTest {
     @Before
     public void init() {
