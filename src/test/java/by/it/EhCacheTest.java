@@ -54,8 +54,8 @@ public class EhCacheTest {
 
     @Test
     public void queryCacheTest2() {
-        Session em = HibernateUtil.getSession();
-        final org.hibernate.query.Query query = em.createQuery("select e from Employee e " +
+        Session session = HibernateUtil.getSession();
+        final org.hibernate.query.Query query = session.createQuery("select e from Employee e " +
                 "where e.firstname like :name")
                 .setParameter("name", "yuli%");
         query.setCacheable(true);
@@ -74,7 +74,7 @@ public class EhCacheTest {
                 .getSingleResult();
 //        System.out.println(yulij);
         em.clear();
-        yulij = em.createQuery("select e from Employee e " +
+        yulij = HibernateUtil.getEntityManager().createQuery("select e from Employee e " +
                 "where e.firstname like :name", Employee.class)
                 .setParameter( "name", "yuli%")
                 .setHint( "org.hibernate.cacheable", "true")
@@ -83,20 +83,6 @@ public class EhCacheTest {
         em.close();
     }
 
-    @Test
-    public void transactionTest() {
-        EntityManager em = HibernateUtil.getEntityManager();
-        Department economist = new Department("Economist");
-        try {
-            em.getTransaction().begin();
-            em.persist(economist);
-            // Other business logic stuff
-            em.getTransaction().commit();
-        } catch (RollbackException e) {
-            em.getTransaction().rollback();
-        }
-        em.close();
-    }
 
     @AfterClass
     public static void cleanUp() {
